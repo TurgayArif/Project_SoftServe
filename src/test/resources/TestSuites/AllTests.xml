@@ -1,0 +1,129 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTests" verbose="1">
+    <test name="HomePageTests">
+        <classes>
+            <class name="com.easyrestaurant.tests.HomePageTests"/>
+        </classes>
+    </test>
+
+    <test name="ModeratorPanelPageTests">
+        <parameter name="username" value="petermoderator@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.ModeratorPanelPageTests"/>
+        </classes>
+    </test>
+
+    <test name="PositiveLogInTest">
+        <parameter name="username" value="petermoderator@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.PositiveSignInPageTests"/>
+        </classes>
+    </test>
+
+    <test name="RestaurantsPageTests">
+        <parameter name="username" value="jacobcraig@test.com"/>
+        <parameter name="password" value="1111"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.RestaurantsPageTests"/>
+        </classes>
+    </test>
+
+    <test name="WaiterPanelPageTests">
+        <parameter name="username" value="theresaalexander@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.WaiterPanelPageTests"/>
+        </classes>
+    </test>
+    
+    <test name="AdminCanBanUserTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanBanUserTests"/>
+        </classes>
+    </test>
+
+    <test name="AdminCanBanOwnerTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanBanOwnerTests"/>
+        </classes>
+    </test>
+
+    <test name="AdminCanBanModeratorTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanBanModeratorTests"/>
+        </classes>
+    </test>
+
+    <test name="AdminCanUnbanOwnerTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanUnbanOwnerTests"/>
+        </classes>
+    </test>
+
+    <test name="AdminCanUnbanUserTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanUnbanUserTests"/>
+        </classes>
+    </test>
+
+    <test name="AdminCanUnbanModeratorTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanUnbanModeratorTests"/>
+        </classes>
+    </test>
+
+    <test name="AdminCanCreateModeratorTests">
+        <parameter name="username" value="steveadmin@test.com"/>
+        <parameter name="password" value="1"/>
+        <parameter name="moderatorName" value="Ivan Ivanov"/>
+        <parameter name="moderatorEmail" value="ivan@test.com"/>
+        <parameter name="moderatorInvalidEmail" value="ivan@test"/>
+        <parameter name="moderatorPhoneNumber" value="+359123456789"/>
+        <parameter name="moderatorPassword" value="12345678"/>
+        <parameter name="moderatorRepeatedPassword" value="12345678"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdminCanCreateModeratorTests"/>
+        </classes>
+    </test>
+    <test name="CreateAdministratorProfile">
+        <parameter name="username" value="jacobcraig@test.com"/>
+        <parameter name="password" value="1111"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.CreateAdministratorProfileTest"/>
+        </classes>
+    </test>
+    
+     <test name="AdministratorTestSuite">
+        <parameter name="username" value="emilyfitzgerald@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.AdministratorPanelTests"/>
+    </test>
+
+     <test name="UnauthorizedUserRestaurantListNew">
+        <classes>
+            <class name="com.easyrestaurant.tests.UnauthorizedUserRestaurantListNew"/>
+        </classes>
+    </test>
+
+    <test name="UnauthorizedUserDetailsRestaurantNew">
+        <classes>
+            <class name="com.easyrestaurant.tests.UnauthorizedUserDetailsRestaurantNew"/>
+        </classes>
+    </test>
+</suite>

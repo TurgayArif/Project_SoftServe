@@ -1,0 +1,7 @@
+.idea
+nbproject
+.project
+.settings
+test-output/
+allure-results/
+target/

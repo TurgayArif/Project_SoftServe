@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="PositiveLogInTestSuite" verbose="1">
+
+    <test name="PositiveLogInTest">
+        <parameter name="username" value="petermoderator@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.PositiveSignInPageTests"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="WaiterPanelPageTestsSuite" verbose="1">
+
+    <test name="WaiterPanelPageTests">
+        <parameter name="username" value="theresaalexander@test.com"/>
+        <parameter name="password" value="1"/>
+        <classes>
+            <class name="com.easyrestaurant.tests.WaiterPanelPageTests"/>
+        </classes>
+    </test>
+
+</suite>
