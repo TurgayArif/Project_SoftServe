@@ -1,0 +1,5 @@
+username,password,expectedMessage,description
+petermoderator@test.com,,Password is required,empty password
+,1,Email is required,empty email
+petermoderator@test,1,Email is not valid,invalid email
+petermoderator@test.com,11,Email or password is invalid,invalid password

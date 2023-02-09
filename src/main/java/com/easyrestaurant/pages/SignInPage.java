@@ -14,6 +14,10 @@ public class SignInPage extends BasePageObject {
     WebElement passwordInputSelector;
     @FindBy(xpath = "//button[@type='submit']")
     WebElement submitButtonSelector;
+    @FindBy(xpath = "//p[contains(@class, 'FormHelperText-error')]")
+    WebElement errorMessage;
+    @FindBy(id = "client-snackbar")
+    WebElement snackBar;
 
 
     public SignInPage(WebDriver driver, Logger log) {
@@ -33,5 +37,13 @@ public class SignInPage extends BasePageObject {
         click(submitButtonSelector);
         waitForUrlToBe(urlToBe);
         return this;
+    }
+
+    public String getErrorMessage() {
+        return getText(errorMessage);
+    }
+
+    public String getSnackBarErrorMessage() {
+        return getText(snackBar);
     }
 }
