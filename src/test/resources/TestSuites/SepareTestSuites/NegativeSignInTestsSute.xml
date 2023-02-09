@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NegativeSignInTests" verbose="1">
+
+    <test name="NegativeSignInTests">
+        <classes>
+            <class name="com.easyrestaurant.tests.NegativeSignInTests"/>
+        </classes>
+    </test>
+
+</suite>
