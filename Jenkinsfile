@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven "Maven"
-        jdk "JDK19"
-    }
     stages {
         stage('Initialize'){
             steps{
