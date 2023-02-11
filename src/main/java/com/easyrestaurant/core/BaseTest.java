@@ -15,7 +15,6 @@ import java.lang.reflect.Method;
 public class BaseTest {
     protected Browser browser;
     protected Web web;
-    protected PSQL psql;
     protected Logger log;
     protected String testName;
     protected String testMethodName;
@@ -33,16 +32,12 @@ public class BaseTest {
         this.testName = ctx.getCurrentXmlTest().getName();
         this.testMethodName = method.getName();
         Allure.step("Starting browser.");
-
-        psql = new PSQL();
-        psql.connectToDb();
     }
 
     @AfterMethod
     public void afterMethod() {
         Allure.step("Closing browser.");
         browser.tearDown();
-        psql.tearDown();
     }
 
 }

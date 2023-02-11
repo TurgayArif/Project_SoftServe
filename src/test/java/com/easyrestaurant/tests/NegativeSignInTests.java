@@ -3,6 +3,7 @@ package com.easyrestaurant.tests;
 import com.easyrestaurant.core.CsvDataProvider;
 import com.easyrestaurant.core.TestUtils;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,6 +11,7 @@ import java.util.Map;
 
 public class NegativeSignInTests extends TestUtils {
 
+    @Description("Negative log in tests with data provider from csv file.")
     @Test(dataProvider = "csvReader", dataProviderClass = CsvDataProvider.class)
     public void negativeSignInTest(Map<String, String> testData) {
 
