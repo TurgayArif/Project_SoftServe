@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/tikoj/easyrest") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             }
