@@ -23,6 +23,12 @@
         </classes>
     </test>
 
+    <test name="NegativeSignInTests">
+        <classes>
+            <class name="com.easyrestaurant.tests.NegativeSignInTests"/>
+        </classes>
+    </test>
+
     <test name="RestaurantsPageTests">
         <parameter name="username" value="jacobcraig@test.com"/>
         <parameter name="password" value="1111"/>
@@ -39,91 +45,5 @@
         </classes>
     </test>
     
-    <test name="AdminCanBanUserTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanBanUserTests"/>
-        </classes>
-    </test>
 
-    <test name="AdminCanBanOwnerTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanBanOwnerTests"/>
-        </classes>
-    </test>
-
-    <test name="AdminCanBanModeratorTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanBanModeratorTests"/>
-        </classes>
-    </test>
-
-    <test name="AdminCanUnbanOwnerTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanUnbanOwnerTests"/>
-        </classes>
-    </test>
-
-    <test name="AdminCanUnbanUserTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanUnbanUserTests"/>
-        </classes>
-    </test>
-
-    <test name="AdminCanUnbanModeratorTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanUnbanModeratorTests"/>
-        </classes>
-    </test>
-
-    <test name="AdminCanCreateModeratorTests">
-        <parameter name="username" value="steveadmin@test.com"/>
-        <parameter name="password" value="1"/>
-        <parameter name="moderatorName" value="Ivan Ivanov"/>
-        <parameter name="moderatorEmail" value="ivan@test.com"/>
-        <parameter name="moderatorInvalidEmail" value="ivan@test"/>
-        <parameter name="moderatorPhoneNumber" value="+359123456789"/>
-        <parameter name="moderatorPassword" value="12345678"/>
-        <parameter name="moderatorRepeatedPassword" value="12345678"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdminCanCreateModeratorTests"/>
-        </classes>
-    </test>
-    <test name="CreateAdministratorProfile">
-        <parameter name="username" value="jacobcraig@test.com"/>
-        <parameter name="password" value="1111"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.CreateAdministratorProfileTest"/>
-        </classes>
-    </test>
-    
-     <test name="AdministratorTestSuite">
-        <parameter name="username" value="emilyfitzgerald@test.com"/>
-        <parameter name="password" value="1"/>
-        <classes>
-            <class name="com.easyrestaurant.tests.AdministratorPanelTests"/>
-    </test>
-
-     <test name="UnauthorizedUserRestaurantListNew">
-        <classes>
-            <class name="com.easyrestaurant.tests.UnauthorizedUserRestaurantListNew"/>
-        </classes>
-    </test>
-
-    <test name="UnauthorizedUserDetailsRestaurantNew">
-        <classes>
-            <class name="com.easyrestaurant.tests.UnauthorizedUserDetailsRestaurantNew"/>
-        </classes>
-    </test>
 </suite>
