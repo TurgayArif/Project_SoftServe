@@ -1,23 +1,27 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven 3.3.9'
-        jdk 'jdk17'
+        maven "MAVEN"
+        jdk "JDK"
     }
     stages {
-        stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                '''
+        stage('Initialize'){
+            steps{
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = /opt/maven"
             }
         }
-
-        stage ('Build') {
+        stage('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                dir("/var/lib/jenkins/workspace/tikoj/easyrest") {
+                sh 'mvn -B -DskipTests clean package'
+                }
             }
-       }
-    }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+     }
 }
